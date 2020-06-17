@@ -17,6 +17,7 @@ public class SmallSHACL extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        stage.setTitle("Small SHACL-core playground");
         scene = new Scene(loadFXML("smallshacl"));
         stage.setScene(scene);
         stage.setMinWidth(800);
