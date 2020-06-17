@@ -16,6 +16,8 @@ public class Validator {
         Model shaclModel = parseTurtle(shaclgraph);
 
         Resource report = ValidationUtil.validateModel(dataModel, shaclModel, true);
+        Model reportModel = report.getModel();
+        reportModel.setNsPrefix("sh", "http://www.w3.org/ns/shacl#");
         return ModelPrinter.get().print(report.getModel());
     }
 
